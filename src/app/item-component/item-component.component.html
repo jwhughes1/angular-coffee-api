@@ -1,0 +1,35 @@
+
+<!--<p id="coffee-info"></p>-->
+<table border="1" class = "center">
+  <tr *ngFor="let r of results | paginate: { itemsPerPage: number_of_items, currentPage: p }">
+    <td>
+        <table border="0" >
+            <tr>
+                <td>ID: {{r.id}}</td> 
+            </tr>
+            <tr>
+                <td>UID: {{r.uid}}</td>
+            </tr>
+            <tr>
+                <td>Blend Name: {{r.blend_name}}</td>
+            </tr>
+                <td>Origin: {{r.origin}}</td>
+            <tr> 
+            <tr> 
+                <td>Variety: {{r.variety}}</td>
+            </tr>
+            <tr> 
+                <td>Notes: {{r.notes}}</td>
+            </tr>
+            <tr>
+                <td>Intensifier: {{r.intensifier}}</td>
+            </tr>
+           </table>
+    </td>
+  </tr>
+</table>
+
+<!--Including the pagination control.-->
+<div class="text-right">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
