@@ -1,9 +1,10 @@
 
-<!--<p id="coffee-info"></p>-->
-<table border="1" class = "center">
-  <tr *ngFor="let r of results | paginate: { itemsPerPage: number_of_items, currentPage: p }">
-    <td>
+<table border="0" class = "center">
+    <tr *ngFor="let r of temp | paginate: { itemsPerPage: number_of_items, currentPage: p }">
+        <td>
         <table border="0" >
+        <div class="sample-div text background">
+            <!--7x1 inner nested table-->
             <tr>
                 <td>ID: {{r.id}}</td> 
             </tr>
@@ -14,8 +15,7 @@
                 <td>Blend Name: {{r.blend_name}}</td>
             </tr>
                 <td>Origin: {{r.origin}}</td>
-            <tr> 
-            <tr> 
+            <tr>
                 <td>Variety: {{r.variety}}</td>
             </tr>
             <tr> 
@@ -24,12 +24,13 @@
             <tr>
                 <td>Intensifier: {{r.intensifier}}</td>
             </tr>
+        </div>
            </table>
     </td>
-  </tr>
+</tr>
+<!--Including the pagination control.-->
 </table>
 
-<!--Including the pagination control.-->
-<div class="text-right">
+<div class="pagination">
     <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>

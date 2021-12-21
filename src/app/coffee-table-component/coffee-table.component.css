@@ -1,0 +1,30 @@
+.center 
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sample-div
+{
+  width: 300px;
+  border: 3px solid #286fb4;
+  padding: 20px;
+  margin: 20px;
+}
+
+.text
+{
+  font-family: "Open Sans", "Calibri", "light";
+  text-align:left;
+}
+
+.background
+{
+  background-color: white;
+}
+
+.pagination
+{
+  text-align: center;
+  font-family: "Open Sans", "Calibri", "light";
+}
