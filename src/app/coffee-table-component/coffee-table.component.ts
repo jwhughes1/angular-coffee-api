@@ -26,11 +26,15 @@ export class CoffeeTableComponent implements OnInit
   {
     for (let i = 0; i < 50; i++)
     {
-      this.store.dispatch(new fromCoffee.GetCoffeeLoad());
+      this.dispatchRequest();
     }
     this.getFiftyItems();
   }
 
+  private dispatchRequest()
+  {
+    this.store.dispatch(new fromCoffee.GetCoffeeLoad());
+  }
   public getFiftyItems(): void
   {
     this.fiftyItems$ = this.store.pipe(select(fromCoffee.fiftyCoffeeItems));
@@ -42,6 +46,7 @@ export class CoffeeTableComponent implements OnInit
       {
         this.temp.push(res.data[0]); //res is an array that contains 1 element - the JSON we get from our API call
                                      //So indexing that 1 element will give us the data
+        console.log(this.temp);
       }
     }
     );

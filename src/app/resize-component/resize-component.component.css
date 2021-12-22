@@ -1,30 +1,33 @@
-.footer_platform 
+.title_resizing 
 {    
     text-align: center;
-    font-size: 16px;
     font-family: "Open Sans","Calibri","light";
+    color:#286fb4;
+    background-color: #e2f0f9;
 }
 
-/*Focus on other stuff first. But add more breakpoint stuff if done early - deadline 12;15 tomorrow*/
+/*We are using responsive design to change the title size depending on your device*/
 
-/*
-  We have 3 different colors of breakpoints.
-*/
-
-/* This is the typical screen width for smartphones (below 767 pixels)
-and as such - the 'Breakpoint text' in resize-component.component will be black */
+ /*For small devices (most phones fall in this range*/
   @media only screen and (max-width: 767px) {
-    .footer_platform {color:black}
+    .title_resizing 
+    {
+      font-size: 48px;
+    }
   }
   
-  /* This screen width (768px - 1024px) is a typical screen width for tablets and small laptops.
-  For this size screens, the 'Breakpoint Text' is dark blue.*/
-  @media only screen and (min-width: 800px) and (max-width: 1024px){
-    .footer_platform {color:darkblue;}
+  /*For medium-sized devices (tablets and notebooks)*/
+  @media only screen and (min-width: 768px) and (max-width: 1024px){
+    .title_resizing
+    {
+      font-size: 60px;
+    }
   }
   
-  /* This screen width (1024px and up) is common for larger laptops, most desktop monitors and TVs.
-  For these screens, the 'Breakpoint Text' is the same hue of blue as the "Justin Hughes, 2021" heading.*/
+  /* Display size for most standard laptop/desktop displays*/
   @media only screen and (min-width: 1024px) {
-    .footer_platform{color:#286fb4;}
+    .title_resizing
+    {
+      font-size: 72px;
+    }
   } 

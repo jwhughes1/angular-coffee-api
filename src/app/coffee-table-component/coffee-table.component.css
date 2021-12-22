@@ -1,3 +1,4 @@
+/*Different classes for displaying CSS elements*/
 .center 
 {
     margin-left: auto;
@@ -6,10 +7,15 @@
 
 .sample-div
 {
-  width: 300px;
   border: 3px solid #286fb4;
   padding: 20px;
   margin: 20px;
+}
+
+.text
+{
+  font-family: "Open Sans", "Calibri", "light";
+  text-align:left;
 }
 
 .text
@@ -27,4 +33,41 @@
 {
   text-align: center;
   font-family: "Open Sans", "Calibri", "light";
+}
+
+/* Responsive design for growing the table display size */
+
+/*Small devices (phones)*/
+@media only screen and (max-width: 768px) {
+  .sample-div
+  {
+    width: 250px;
+    height: 30%;
+  }
+}
+
+/*Medium devices (phones/notebooks)*/
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .sample-div
+  {
+    width: 350px;
+    height: 30%;
+  }
+}
+
+/* Standard dislays for laptops and desktops*/
+@media only screen and (min-width: 1024px) {
+  .sample-div
+  {
+    width: 450px;
+    height: 30%;
+  }
+}
+/* Larger display (for larger computers and TVs)*/
+@media only screen and (min-width: 1200px) {
+  .sample-div
+  {
+    width: 550px;
+    height: 35%;
+  }
 }

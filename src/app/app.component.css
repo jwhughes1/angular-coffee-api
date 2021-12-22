@@ -1,11 +1,9 @@
 .footer 
 {
-    height: 40px;
     width: 100%;
     background-color: #e2f0f9;
     color: #286fb4;
     text-align: right;
-    font-size: 16px;
     font-family: "Open Sans","Calibri","light";
     padding-right: 24px;
  }
@@ -28,8 +26,36 @@
     font-size: 24px;
 }
 
-
 .section
 {
     min-height: 100vh - 40px;
 }
+
+/*3 breakpoints for resizing the footer (depending on screen size)*/
+
+/* Small devices (such as phones)*/
+@media only screen and (max-width: 767px) {
+    .footer 
+    {
+      height: 30px;
+      font-size: 16px;
+    }
+  }
+  
+  /* Medium devices (tablets/notebooks)*/
+  @media only screen and (min-width: 768px) and (max-width: 1024px){
+    .footer
+    {
+      height: 32px;
+      font-size: 18px;
+    }
+  }
+  
+  /* Larger devices (desktops/laptops)*/
+  @media only screen and (min-width: 1024px) {
+    .footer
+    {
+      height: 34px;
+      font-size: 20px;
+    }
+  } 
