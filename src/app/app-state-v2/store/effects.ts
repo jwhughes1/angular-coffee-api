@@ -3,7 +3,7 @@ import { of } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { map, mergeMap, catchError } from 'rxjs/operators';
-import { CoffeeService } from '../services/item-component-service';
+import { CoffeeService } from '../services/coffee-service';
 import { Observable } from 'rxjs';
 import { Action } from '@ngrx/store';
 import * as fromCoffee from '.'
@@ -17,7 +17,7 @@ export class CoffeeEffects {
         
     }
 
-    //Fix to createEffect?
+  //Using an NGRX effect to dispatch HTTP requests
   @Effect()
   loadCoffee$: Observable<Action> =
   this.actions$.pipe(

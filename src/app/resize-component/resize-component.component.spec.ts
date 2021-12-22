@@ -23,14 +23,16 @@ describe('ResizeComponentComponent', () => {
     const fixture = TestBed.createComponent(ResizeComponentComponent);
     fixture.detectChanges();
     
-    const compiled = fixture.debugElement.query(By.css(".footer_platform"));
+    const compiled = fixture.debugElement.query(By.css(".title_resizing"));
     expect(compiled.nativeElement.enabled).toHaveBeenCalled;
   }));
 
-  it(`Should show 'Breakpoint Text'`, waitForAsync (() => {
+  it(`Should show at top of class in div tag 'List of Coffees'`, waitForAsync (() => {
     const fixture = TestBed.createComponent(ResizeComponentComponent);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.query(By.css(".footer_platform")).nativeElement;
-    expect(compiled.textContent).toContain('Breakpoint text');
+
+    const compiled = fixture.debugElement.query(By.css(".title_resizing")).nativeElement;
+    expect(compiled.textContent).toContain('List of Coffees:');
   }));
+
 });

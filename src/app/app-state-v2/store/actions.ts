@@ -3,6 +3,7 @@ import { ICoffee } from '../interfaces/coffee.interface';
 import { HttpErrorResponse } from '@angular/common/http';
 
 export enum CoffeeActionTypes 
+//3 types of states to consider - load, success, fail
 {
     GetCoffeeLoad = '[Coffee] Get Coffee',
     GetCoffeeSuccess = '[Coffee] Get Coffee Success',

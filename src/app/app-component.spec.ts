@@ -2,6 +2,7 @@ import { TestBed, waitForAsync } from '@angular/core/testing';
 import { AppComponent } from 'src/app/app.component';
 import { By} from '@angular/platform-browser';
 
+//Preparing the component for testing.
 describe('AppComponent', () => {
   beforeEach(waitForAsync (() => {
     TestBed.configureTestingModule({
@@ -11,26 +12,21 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
   
-  it('should create the app-component', waitForAsync (() => {
+  //Testing to create the component
+  it('Should create the app-component', waitForAsync (() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
 
+  //Making sure we have the right title for our project
   it(`Should have as title 'coffee-random-api-project-justin-hughes'`, waitForAsync (() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('coffee-random-api-project-justin-hughes');
   }));
 
-  it(`Should show at top of class in div tag 'List of Coffees'`, waitForAsync (() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-
-    const compiled = fixture.debugElement.query(By.css(".title")).nativeElement;
-    expect(compiled.textContent).toContain('List of Coffees:');
-  }));
-
+  //Make sure the coffee-table-component (which holds our data and the visualisations) is visible.
   it('Make sure coffee-table-component is showing up', waitForAsync (() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
@@ -38,6 +34,7 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('coffee-table-component')).toBeTruthy();
   }));
 
+  //Make sure we can see the footer (showing my name and that I read the instructions haha).
   it('Make sure footer is showing up', waitForAsync (() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
@@ -45,10 +42,11 @@ describe('AppComponent', () => {
     expect(compiled.textContent).toContain('Justin Hughes, 2021');
   }));
 
-  it('Make sure resizable-text is showing up', waitForAsync (() => {
+  it('Make sure component for resizing title is showing up', waitForAsync (() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('app-resize-component')).toBeTruthy();
   }));
+
 });

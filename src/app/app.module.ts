@@ -9,7 +9,7 @@ import { CoffeeTableComponent } from './coffee-table-component/coffee-table.comp
 import { CoffeeEffects } from './app-state-v2/store/effects';
 import { reducer } from './app-state-v2/store/reducer';
 import { HttpClientModule } from '@angular/common/http';
-import {CoffeeService } from './app-state-v2/services/item-component-service';
+import {CoffeeService } from './app-state-v2/services/coffee-service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ResizeComponentComponent } from './resize-component/resize-component.component'
 
